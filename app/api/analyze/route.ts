@@ -16,14 +16,14 @@ export async function POST(req: NextRequest) {
         }
 
         // The client gets the API key from the environment variable `GEMINI_API_KEY`.
-        const ai = new GoogleGenAI({ apiKey: process.env.gemini_api_key });
+        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
         // Combine system prompt with user description
         const fullPrompt = `${NYAYDOST_SYSTEM_PROMPT}\n\nUSER QUERY: ${description}`;
         console.log("🤖 Sending to Gemini...");
 
         const response = await ai.models.generateContent({
-            model: 'gemini-2.0-flash-exp',
+            model: 'gemini-1.5-flash',
             contents: fullPrompt,
         });
 
