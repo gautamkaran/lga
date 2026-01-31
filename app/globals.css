@@ -10,6 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary: #135bec;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #101622;
+  --font-display: var(--font-inter), sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +27,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  @keyframes pulse-soft {
+
+    0%,
+    100% {
+      opacity: 0.1;
+      transform: scale(0.95);
+    }
+
+    50% {
+      opacity: 0.3;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
 }
