@@ -1,10 +1,11 @@
 
+
+import { MdWarning } from "react-icons/md";
+
 export default function EthicalDisclaimer() {
     return (
         <div className="mt-4 p-6 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-900/50 flex gap-4">
-            <span className="material-symbols-outlined text-amber-600 dark:text-amber-400 shrink-0">
-                warning
-            </span>
+            <MdWarning className="text-amber-600 dark:text-amber-400 shrink-0" />
             <div className="flex flex-col gap-1">
                 <p className="text-amber-800 dark:text-amber-300 font-bold text-sm uppercase tracking-wide">
                     Ethical Legal Disclaimer

@@ -1,12 +1,13 @@
 
+
+import { MdVerifiedUser, MdCheckCircle, MdError } from "react-icons/md";
+
 export default function CapabilitiesComparison() {
     return (
         <div className="px-4 md:px-40 flex justify-center py-5">
             <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
                 <div className="flex items-center gap-2 px-4 pb-3 pt-5">
-                    <span className="material-symbols-outlined text-primary">
-                        verified_user
-                    </span>
+                    <MdVerifiedUser className="text-primary" />
                     <h2 className="text-[#111318] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">
                         Capabilities &amp; Boundaries
                     </h2>
@@ -16,9 +17,7 @@ export default function CapabilitiesComparison() {
                     <div className="flex flex-col gap-4">
                         <div className="bg-primary/5 dark:bg-primary/10 p-4 rounded-xl border border-primary/20">
                             <p className="text-primary text-sm font-bold uppercase tracking-wider flex items-center gap-2 mb-4">
-                                <span className="material-symbols-outlined text-sm">
-                                    check_circle
-                                </span>{" "}
+                                <MdCheckCircle className="text-sm" />{" "}
                                 What we can do
                             </p>
                             <div className="flex flex-col gap-4">
@@ -64,7 +63,7 @@ export default function CapabilitiesComparison() {
                     <div className="flex flex-col gap-4">
                         <div className="bg-gray-100 dark:bg-white/5 p-4 rounded-xl border border-[#dbdfe6] dark:border-white/10">
                             <p className="text-red-600 dark:text-red-400 text-sm font-bold uppercase tracking-wider flex items-center gap-2 mb-4">
-                                <span className="material-symbols-outlined text-sm">error</span>{" "}
+                                <MdError className="text-sm" />{" "}
                                 What we cannot do
                             </p>
                             <div className="flex flex-col gap-4">

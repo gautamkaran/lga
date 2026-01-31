@@ -1,5 +1,7 @@
 
+
 import Link from "next/link";
+import { MdPsychology, MdArrowForward } from "react-icons/md";
 
 export default function ResponsibleAIPanel() {
     return (
@@ -9,9 +11,7 @@ export default function ResponsibleAIPanel() {
                     <div className="flex flex-1 flex-col items-start justify-between gap-6 rounded-xl border border-[#dbdfe6] dark:border-gray-800 bg-white dark:bg-background-dark p-6 @[480px]:flex-row @[480px]:items-center">
                         <div className="flex flex-col gap-2">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined text-primary">
-                                    psychology
-                                </span>
+                                <MdPsychology className="text-primary" />
                                 <p className="text-[#111318] dark:text-white text-lg font-bold leading-tight">
                                     Responsible AI Implementation
                                 </p>
@@ -28,9 +28,7 @@ export default function ResponsibleAIPanel() {
                             href="#"
                         >
                             Read our AI Ethics
-                            <span className="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">
-                                arrow_forward
-                            </span>
+                            <MdArrowForward className="text-[20px] group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
                 </div>

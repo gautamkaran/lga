@@ -1,4 +1,7 @@
 
+
+import { MdGavel, MdVolunteerActivism, MdInfo } from "react-icons/md";
+
 export default function ResourceGrid() {
     return (
         <>
@@ -10,7 +13,7 @@ export default function ResourceGrid() {
                 <div className="flex flex-col gap-4 rounded-xl border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-[#1a2130] p-5 shadow-sm">
                     <div className="flex items-center gap-3">
                         <div className="size-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
-                            <span className="material-symbols-outlined">gavel</span>
+                            <MdGavel />
                         </div>
                         <h3 className="text-[#111318] dark:text-white text-lg font-bold">
                             Free Legal Aid (NALSA)
@@ -33,9 +36,7 @@ export default function ResourceGrid() {
                 <div className="flex flex-col gap-4 rounded-xl border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-[#1a2130] p-5 shadow-sm">
                     <div className="flex items-center gap-3">
                         <div className="size-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
-                            <span className="material-symbols-outlined">
-                                volunteer_activism
-                            </span>
+                            <MdVolunteerActivism />
                         </div>
                         <h3 className="text-[#111318] dark:text-white text-lg font-bold">
                             Women&apos;s Rights NGOs
@@ -57,7 +58,7 @@ export default function ResourceGrid() {
                 {/* Info Card 3 - Awareness */}
                 <div className="md:col-span-2 flex flex-col gap-3 rounded-xl bg-primary/5 dark:bg-primary/10 p-6 border border-primary/20">
                     <h3 className="text-[#111318] dark:text-white font-bold flex items-center gap-2">
-                        <span className="material-symbols-outlined text-primary">info</span>
+                        <MdInfo className="text-primary" />
                         Know Your Rights: Zero FIR
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">

@@ -1,4 +1,7 @@
 
+
+import { MdInfo } from "react-icons/md";
+
 export default function GeneralAwareness() {
     return (
         <div className="rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden">
@@ -15,7 +18,7 @@ export default function GeneralAwareness() {
                 </div>
                 <div className="flex-1 p-6 flex flex-col justify-center gap-3">
                     <div className="flex items-center gap-2 text-primary">
-                        <span className="material-symbols-outlined text-[20px]">info</span>
+                        <MdInfo className="text-[20px]" />
                         <h3 className="text-lg font-bold">General Awareness</h3>
                     </div>
                     <p className="text-slate-700 dark:text-slate-300 text-base leading-relaxed">

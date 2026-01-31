@@ -1,16 +1,20 @@
 
 import Link from "next/link";
+import { MdGavel } from "react-icons/md";
+
 
 export default function AnalyzeHeader() {
     return (
         <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#374151] bg-white dark:bg-[#1a2130] px-10 py-3 z-10">
             <div className="flex items-center gap-4 text-[#111318] dark:text-white">
                 <div className="size-6 text-primary">
-                    <span className="material-symbols-outlined text-3xl">gavel</span>
+                    <MdGavel className="text-3xl" />
                 </div>
-                <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">
-                    My Lawyer
-                </h2>
+                <Link href="/">
+                    <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">
+                        My Lawyer
+                    </h2>
+                </Link>
             </div>
             <div className="flex flex-1 justify-end gap-8">
                 <div className="flex items-center gap-9">

@@ -1,28 +1,25 @@
 
+
+import { MdGavel, MdSecurity, MdPsychology } from "react-icons/md";
+
 export default function TrustFooter() {
     return (
         <>
             <div className="mt-12 flex flex-wrap justify-center gap-8 opacity-60">
                 <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[#616f89] dark:text-gray-400">
-                        gavel
-                    </span>
+                    <MdGavel className="text-[#616f89] dark:text-gray-400" />
                     <span className="text-[#616f89] dark:text-gray-400 text-xs font-medium uppercase tracking-wider">
                         Indian Law Optimized
                     </span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[#616f89] dark:text-gray-400">
-                        security
-                    </span>
+                    <MdSecurity className="text-[#616f89] dark:text-gray-400" />
                     <span className="text-[#616f89] dark:text-gray-400 text-xs font-medium uppercase tracking-wider">
                         Secure Data
                     </span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[#616f89] dark:text-gray-400">
-                        psychology
-                    </span>
+                    <MdPsychology className="text-[#616f89] dark:text-gray-400" />
                     <span className="text-[#616f89] dark:text-gray-400 text-xs font-medium uppercase tracking-wider">
                         AI Powered
                     </span>

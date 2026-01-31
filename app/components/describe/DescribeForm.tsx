@@ -1,8 +1,24 @@
 
+"use client";
 
-import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { MdInfo, MdSecurity, MdArrowForward } from "react-icons/md";
 
 export default function DescribeForm() {
+    const [description, setDescription] = useState("");
+    const router = useRouter();
+
+    const handleGetGuidance = () => {
+        if (description.trim()) {
+            sessionStorage.setItem("case_description", description);
+            router.push("/analysis");
+        } else {
+            // Optional: Shake effect or alert
+            alert("Please describe your situation first.");
+        }
+    };
+
     return (
         <div className="w-full max-w-[800px] flex flex-col items-center">
             {/* HeadlineText Component */}
@@ -23,8 +39,10 @@ export default function DescribeForm() {
                             Describe your legal concern
                         </p>
                         <textarea
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
                             className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111318] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbdfe6] dark:border-[#2d3748] bg-white dark:bg-[#101622] min-h-[200px] placeholder:text-[#616f89] p-5 text-lg font-normal leading-relaxed"
-                            placeholder="Describe your legal concern in simple words..."
+                            placeholder="Describe your legal concern in simple words... (e.g., My landlord is not returning my deposit)"
                         ></textarea>
                     </label>
                 </div>
@@ -32,25 +50,23 @@ export default function DescribeForm() {
                 <div className="flex flex-col md:flex-row md:items-center justify-between mt-4 gap-4">
                     <div className="flex flex-col">
                         <p className="text-[#616f89] dark:text-gray-400 text-sm font-normal flex items-center gap-2">
-                            <span className="material-symbols-outlined text-base">info</span>
+                            <MdInfo className="text-base" />
                             You don’t need to know legal terms.
                         </p>
                         <p className="text-[#616f89] dark:text-gray-400 text-sm font-normal flex items-center gap-2 mt-1">
-                            <span className="material-symbols-outlined text-base">
-                                shield_lock
-                            </span>
+                            <MdSecurity className="text-base" />
                             Your privacy is respected.
                         </p>
                     </div>
                     {/* SingleButton Component */}
                     <div className="flex justify-end">
-                        <Link
-                            href="/analysis"
+                        <button
+                            onClick={handleGetGuidance}
                             className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-8 bg-primary text-white gap-3 text-lg font-bold transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20"
                         >
                             <span className="truncate">Get Guidance</span>
-                            <span className="material-symbols-outlined">arrow_forward</span>
-                        </Link>
+                            <MdArrowForward />
+                        </button>
                     </div>
                 </div>
             </div>

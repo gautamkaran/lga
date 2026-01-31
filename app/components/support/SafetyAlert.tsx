@@ -1,11 +1,14 @@
 
+
+import { MdWarning } from "react-icons/md";
+
 export default function SafetyAlert() {
     return (
         <div className="p-4 @container">
             <div className="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-800 p-6 @[480px]:flex-row @[480px]:items-center shadow-sm">
                 <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2 text-amber-800 dark:text-amber-200">
-                        <span className="material-symbols-outlined">warning</span>
+                        <MdWarning />
                         <p className="text-lg font-bold leading-tight">
                             If you are in immediate danger, please contact local authorities.
                         </p>

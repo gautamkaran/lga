@@ -1,4 +1,7 @@
 
+
+import { MdTranslate, MdSchedule, MdMenuBook } from "react-icons/md";
+
 export default function FeatureSection() {
     return (
         <section className="bg-white dark:bg-slate-900/50 py-20 border-y border-[#f0f2f4] dark:border-slate-800">
@@ -22,7 +25,7 @@ export default function FeatureSection() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 hover:border-primary transition-all shadow-sm hover:shadow-xl">
                         <div className="bg-primary/10 text-primary w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span className="material-symbols-outlined">translate</span>
+                            <MdTranslate className="text-2xl" />
                         </div>
                         <h3 className="text-xl font-bold mb-3">Simple Language</h3>
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -32,7 +35,7 @@ export default function FeatureSection() {
                     </div>
                     <div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 hover:border-primary transition-all shadow-sm hover:shadow-xl">
                         <div className="bg-primary/10 text-primary w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span className="material-symbols-outlined">schedule</span>
+                            <MdSchedule className="text-2xl" />
                         </div>
                         <h3 className="text-xl font-bold mb-3">24/7 Availability</h3>
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -42,7 +45,7 @@ export default function FeatureSection() {
                     </div>
                     <div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-[#dbdfe6] dark:border-slate-700 hover:border-primary transition-all shadow-sm hover:shadow-xl">
                         <div className="bg-primary/10 text-primary w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span className="material-symbols-outlined">menu_book</span>
+                            <MdMenuBook className="text-2xl" />
                         </div>
                         <h3 className="text-xl font-bold mb-3">IPC &amp; BNS Citations</h3>
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">

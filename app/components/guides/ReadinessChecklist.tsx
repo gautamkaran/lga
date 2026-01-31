@@ -1,11 +1,12 @@
 
+
+import { MdFactCheck } from "react-icons/md";
+
 export default function ReadinessChecklist() {
     return (
         <div className="flex flex-col bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
             <h2 className="text-slate-900 dark:text-white text-xl font-bold px-6 pt-6 pb-4 flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary">
-                    fact_check
-                </span>
+                <MdFactCheck className="text-primary" />
                 Readiness Checklist
             </h2>
             <div className="px-6 pb-8 space-y-3">

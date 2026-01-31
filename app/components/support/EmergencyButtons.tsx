@@ -1,4 +1,7 @@
 
+
+import { MdCall, MdSupportAgent } from "react-icons/md";
+
 export default function EmergencyButtons() {
     return (
         <>
@@ -14,13 +17,11 @@ export default function EmergencyButtons() {
             <div className="flex justify-center mb-8">
                 <div className="flex flex-1 gap-4 flex-wrap px-4 py-3 max-w-[720px] justify-center">
                     <button className="flex min-w-[240px] max-w-[480px] cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl h-16 px-6 bg-red-600 hover:bg-red-700 text-white text-xl font-bold leading-normal tracking-[0.015em] grow shadow-lg transition-all active:scale-95">
-                        <span className="material-symbols-outlined text-3xl">call</span>
+                        <MdCall className="text-3xl" />
                         <span className="truncate">Call 100 (Police)</span>
                     </button>
                     <button className="flex min-w-[240px] max-w-[480px] cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-xl h-16 px-6 bg-primary text-white text-xl font-bold leading-normal tracking-[0.015em] grow shadow-lg transition-all active:scale-95">
-                        <span className="material-symbols-outlined text-3xl">
-                            support_agent
-                        </span>
+                        <MdSupportAgent className="text-3xl" />
                         <span className="truncate">1091 (Women Helpline)</span>
                     </button>
                 </div>

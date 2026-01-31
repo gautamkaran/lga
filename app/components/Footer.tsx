@@ -1,4 +1,7 @@
 
+import Link from "next/link";
+import { MdGavel, MdShare, MdMail } from "react-icons/md";
+
 export default function Footer() {
     return (
         <footer className="bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900 py-12">
@@ -6,14 +9,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
                     <div className="flex items-center gap-3">
                         <div className="text-primary">
-                            <svg
-                                className="w-6 h-6"
-                                fill="currentColor"
-                                viewBox="0 0 48 48"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"></path>
-                            </svg>
+                            <MdGavel className="w-6 h-6" />
                         </div>
                         <h2 className="text-[#111318] dark:text-white text-lg font-bold">
                             My Lawyer
@@ -40,13 +36,13 @@ export default function Footer() {
                             className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary transition-colors"
                             href="#"
                         >
-                            <span className="material-symbols-outlined text-sm">share</span>
+                            <MdShare className="text-sm" />
                         </a>
                         <a
                             className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary transition-colors"
                             href="#"
                         >
-                            <span className="material-symbols-outlined text-sm">mail</span>
+                            <MdMail className="text-sm" />
                         </a>
                     </div>
                 </div>
