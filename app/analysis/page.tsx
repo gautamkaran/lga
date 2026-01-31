@@ -35,16 +35,15 @@ export default function AnalysisPage() {
 
                 if (!res.ok) {
                     const errorData = await res.json();
-                    throw new Error(errorData.error || "Failed to analyze");
+                    const detailedError = errorData.message || errorData.details || errorData.error || "Failed to analyze";
+                    throw new Error(detailedError);
                 }
 
                 const data = await res.json();
                 setAnalysisData(data);
             } catch (err: any) {
-                console.error(err);
+                console.error("Analysis Error:", err);
                 setError(err.message || "Something went wrong. Please try again.");
-                // Fallback to mock data on error so the user sees SOMETHING
-                // setAnalysisData(MOCK_ANALYSIS_RESULT); 
             } finally {
                 setIsLoading(false);
             }
